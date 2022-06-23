@@ -145,13 +145,15 @@ def banner():
 	wel='# WELCOME TO TOOL KRIBO'
 	cik2=mark(wel ,style='red')
 	sol().print(cik2)
-ban='''
+        ban='''
  _     ____  _  __
 | |   | __ )| |/ /
 | |   |  _ \| ' /
 | |___| |_) | . \
 |_____|____/|_|\_\                                                                         
 
+VERSION 2.0 •
+FB : BANGSAT BERKELAS
 '''
 	oi = nel(tekz(ban,justify='center',style='bold'), style='green')
 	cetak(nel(oi, title='[bold red] • DEVELOVER INFORMATION • [/bold red]'))
