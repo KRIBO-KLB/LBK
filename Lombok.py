@@ -145,15 +145,17 @@ def banner():
 	wel='# WELCOME TO TOOL KRIBO'
 	cik2=mark(wel ,style='red')
 	sol().print(cik2)
-        ban='''
- _     ____  _  __
-| |   | __ )| |/ /
-| |   |  _ \| ' /
-| |___| |_) | . \
-|_____|____/|_|\_\                                                                         
-
-VERSION 2.0 •
-FB : BANGSAT BERKELAS
+	ban='''
+•   AUTHOR  : KRIBO & WHATSAPP : 0137397164  •       
+╭━━━┳━━━━┳━━┳━━━╮╭━━━┳╮╱╭┳━╮╭━┳━━━┳━━━╮
+┃╭━╮┃╭╮╭╮┣┫┣┫╭━━╯┃╭━╮┃┃╱┃┃┃╰╯┃┃╭━━┻╮╭╮┃
+┃┃╱┃┣╯┃┃╰╯┃┃┃╰━━╮┃┃╱┃┃╰━╯┃╭╮╭╮┃╰━━╮┃┃┃┃
+┃╰━╯┃╱┃┃╱╱┃┃┃╭━━╯┃╰━╯┃╭━╮┃┃┃┃┃┃╭━━╯┃┃┃┃
+┃╭━╮┃╱┃┃╱╭┫┣┫┃╱╱╱┃╭━╮┃┃╱┃┃┃┃┃┃┃╰━━┳╯╰╯┃
+╰╯╱╰╯╱╰╯╱╰━━┻╯╱╱╱╰╯╱╰┻╯╱╰┻╯╰╯╰┻━━━┻━━━╯
+ FB BANGSAT BERKELAS
+ VERSION 2.0 •
+•PAGE:TERMUX TERMINAL 🌹   •
 '''
 	oi = nel(tekz(ban,justify='center',style='bold'), style='green')
 	cetak(nel(oi, title='[bold red] • DEVELOVER INFORMATION • [/bold red]'))
