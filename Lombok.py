@@ -142,27 +142,17 @@ def back():
 # BANNER
 def banner():
 	clear()
-	wel='# WELCOME TO FACEBOOK CRACK TOOL'
+	wel='# WELCOME TO TOOL KRIBO'
 	cik2=mark(wel ,style='red')
 	sol().print(cik2)
+ban='''
+ _     ____  _  __
+| |   | __ )| |/ /
+| |   |  _ \| ' /
+| |___| |_) | . \
+|_____|____/|_|\_\                                                                         
 
-
-	ban='''WA:085351203600
-
-
- (                     )                           
- )\ )       (   (   ( /(  (                        
-(()/(   (   )\  )\  )\()) )\ )       )             
- /(_)) ))\ ((_)((_)((_)\ (()/(    ( /(   (     (   
-(_))  /((_) _   _  __((_) /(_))_  )(_))  )\ )  )\  
-| _ \(_))( | | | | \ \/ /(_)) __|((_)_  _(_/( ((_) 
-|   /| || || | | |  >  <   | (_ |/ _` || ' \))(_-< 
-|_|_\ \_,_||_| |_| /_/\_\   \___|\__,_||_||_| /__/ 
-                                                   
-
-                              
-
-PROXY=NONAKTIF×'''
+'''
 	oi = nel(tekz(ban,justify='center',style='bold'), style='green')
 	cetak(nel(oi, title='[bold red] • DEVELOVER INFORMATION • [/bold red]'))
 # VALIDASI TOKEN
