@@ -147,12 +147,11 @@ def banner():
 	sol().print(cik2)
 	ban='''
 •   AUTHOR  : KRIBO & WHATSAPP : 0137397164  •       
-╭━━━┳━━━━┳━━┳━━━╮╭━━━┳╮╱╭┳━╮╭━┳━━━┳━━━╮
-┃╭━╮┃╭╮╭╮┣┫┣┫╭━━╯┃╭━╮┃┃╱┃┃┃╰╯┃┃╭━━┻╮╭╮┃
-┃┃╱┃┣╯┃┃╰╯┃┃┃╰━━╮┃┃╱┃┃╰━╯┃╭╮╭╮┃╰━━╮┃┃┃┃
-┃╰━╯┃╱┃┃╱╱┃┃┃╭━━╯┃╰━╯┃╭━╮┃┃┃┃┃┃╭━━╯┃┃┃┃
-┃╭━╮┃╱┃┃╱╭┫┣┫┃╱╱╱┃╭━╮┃┃╱┃┃┃┃┃┃┃╰━━┳╯╰╯┃
-╰╯╱╰╯╱╰╯╱╰━━┻╯╱╱╱╰╯╱╰┻╯╱╰┻╯╰╯╰┻━━━┻━━━╯
+_  ______  ___ ____   ___        _     ____  _  __
+| |/ /  _ \|_ _| __ ) / _ \      | |   | __ )| |/ /
+| ' /| |_) || ||  _ \| | | |_____| |   |  _ \| ' /
+| . \|  _ < | || |_) | |_| |_____| |___| |_) | . \
+|_|\_\_| \_\___|____/ \___/      |_____|____/|_|\_\
  FB BANGSAT BERKELAS
  VERSION 2.0 •
 •PAGE:TERMUX TERMINAL 🌹   •
@@ -303,10 +302,10 @@ def menu(my_name,my_id):
 	sg = '# USER ACCOUNT INFORMATION'
 	fx = mark(sg, style='cyan')
 	sol().print(fx)
-	print(x+'['+h+'R'+x+'] ACTIVE USER : '+str(my_name))
-	print(x+'['+h+'R'+x+'] USER ID     : '+str(my_id))
-	print(x+'['+h+'R'+x+'] IP ADDRESS  : '+str(sh['origin']))
-	io = '''[bold cyan][01] DUMP ID PUBLIK  [ON]  	    
+	print(x+'['+h+'🌹'+x+'] ACTIVE USER : '+str(my_name))
+	print(x+'['+h+'🌹'+x+'] USER ID     : '+str(my_id))
+	print(x+'['+h+'🌹'+x+'] IP ADDRESS  : '+str(sh['origin']))
+	io = '''[bold cyan][01] DUMP ID PUBLIK        [ON]  	    
 [02] DUMP ID PUBLIK (MASAL)  [ON] 
 [03] DUMP FOLLOWER	     [ON]     
 [04] DUMP DARI SUKAI	     [ON]
@@ -314,11 +313,11 @@ def menu(my_name,my_id):
 [06] CRACK DARI FILE         [ON]
 [07] CHECK OPSI CEKPOIN      [OF]
 [08] CHECK HASIL CRACK       [OF]
-[09] TIPS CRACK 
+[09] TIPS CRACK              [OF]
 [00] LOGOUT[bold cyan]'''
 	oi = nel(io, style='red')
 	cetak(nel(oi, title='[bold cyan] 🌹 MENU CRACK 🌹 [/bold cyan]'))
-	ec = input(x+'['+p+'R'+x+'] Pilih : ')
+	ec = input(x+'['+p+'f'+x+'] Pilih : ')
 	if ec in ['1','01']:
 		dump_publik()
 	elif ec in ['2','02']:
@@ -546,7 +545,7 @@ def dump_publik():
 	win2 = mark(win, style='green')
 	sol().print(win2)
 	print(x+'['+h+'R'+x+'] TYPE "me" IF YOU WANT TO DUMP FROM YOUR FRIENDS')
-	pil = input(x+'['+p+'R'+x+'] INPUT TARGET ID : ')
+	pil = input(x+'['+p+'🌹'+x+'] INPUT TARGET ID : ')
 	dumpdump(pil)
 	print(x+'['+h+'R'+x+'] TOTAL : '+str(len(id)))
 	setting()
@@ -906,7 +905,7 @@ def passwrd():
 	ler = '# CRACK PROCESS START, PRESS CTRL+Z TO STOP'
 	sol().print(mark(ler, style='green'))
 	krek = '[!] OK RESULTS SAVED IN : INTERNAL MEMORY/KRIBO-DATA/OK/%s\n[!] CP RESULTS SAVED IN : INTERNAL MEMORY/KRIBO-DATA/CP/%s\nON OF MODE PESAWATD SETIAP 500 ID'%(okc,cpc)
-	cetak(nel(krek, title=' • CRACK • '))
+	cetak(nel(krek, title=' 🌹 CRACK 🌹 '))
 	with tred(max_workers=30) as pool:
 		for yuzong in id2:
 			try:
